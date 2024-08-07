@@ -1,0 +1,38 @@
+use xuon;
+-- 接口信息
+create table if not exists `interface_info`
+(
+    `id` bigint not null auto_increment comment '主键' primary key,
+    `name` varchar(256) not null comment '名称',
+    `description` varchar(256) null comment '描述',
+    `url` varchar(512) not null comment 'url',
+    `requestHeader` text null comment '请求头',
+    `responseHeader` text null comment '响应头',
+    `status` int default 0 not null comment '接口状态(0-关闭,1开启)',
+    `method` varchar(256) not null comment '请求类型',
+    `userId` bigint not null comment '创建人',
+    `creatTime` datetime not null comment '创建时间',
+    `updateTime` datetime not null comment '更新时间',
+    `isDelete` tinyint default 0 not null comment '是否删除(0-未删,1-已删)'
+) comment '接口信息';
+
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('武晓博', '尹哲瀚', 'www.nicolas-beier.info', 'b2739ce2-bafd-406b-bc1c-16744326a5c5', '212648dd-f050-49bf-a0bb-71688035be7a', '39Ijs', 15227519413, '2022-08-17 13:35:37', '2022-05-19 00:18:10', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('林远航', '孔泽洋', 'www.tad-gleason.info', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', 'Lo', 15814618303, '2022-01-19 10:31:04', '2022-10-05 19:18:04', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('莫子轩', '史晓博', 'www.jewel-treutel.info', 'e655d637-ed11-458c-a4a7-0fe394440138', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', 'MD', 17794604840, '2022-04-13 10:33:05', '2022-03-26 22:24:23', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('董潇然', '魏博超', 'www.kate-larson.com', '0949f235-35ad-4ca8-8392-b118bdd8976e', 'e655d637-ed11-458c-a4a7-0fe394440138', 'z5tL', 15386417685, '2022-04-05 21:16:41', '2022-08-13 13:47:38', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('黄鹏煊', '邓炫明', 'www.oswaldo-koelpin.co', '7d204bc5-3798-4bcd-91ee-36f885e5a853', 'b2739ce2-bafd-406b-bc1c-16744326a5c5', '0kRI', 15148399868, '2022-01-21 16:07:47', '2022-03-05 08:24:20', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('薛煜祺', '孙烨华', 'www.heath-gibson.io', '0949f235-35ad-4ca8-8392-b118bdd8976e', 'b2739ce2-bafd-406b-bc1c-16744326a5c5', 'sZtB1', 14739226463, '2022-01-26 14:09:49', '2022-01-12 17:43:09', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('林鹏飞', '谢荣轩', 'www.arlie-wyman.biz', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', '212648dd-f050-49bf-a0bb-71688035be7a', 'sA1J5', 15394112226, '2022-12-20 19:56:49', '2022-07-25 17:30:03', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('曾思源', '刘昊天', 'www.carola-konopelski.co', '212648dd-f050-49bf-a0bb-71688035be7a', '212648dd-f050-49bf-a0bb-71688035be7a', 'LWqjm', 17651087685, '2022-12-26 19:56:23', '2022-12-29 17:03:09', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('汪鑫鹏', '林智渊', 'www.willis-batz.biz', 'e655d637-ed11-458c-a4a7-0fe394440138', '212648dd-f050-49bf-a0bb-71688035be7a', '3VaB6', 17822436701, '2022-08-12 11:03:47', '2022-07-22 21:06:35', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('马睿渊', '严越彬', 'www.sammy-ondricka.name', '0949f235-35ad-4ca8-8392-b118bdd8976e', '0949f235-35ad-4ca8-8392-b118bdd8976e', 'lU', 17254870227, '2022-08-06 17:35:19', '2022-05-09 06:40:08', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('谢熠彤', '石修杰', 'www.cory-ledner.co', 'e655d637-ed11-458c-a4a7-0fe394440138', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', 'aDKpW', 17676454312, '2022-11-18 13:27:08', '2022-07-01 03:57:50', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('崔立辉', '许晋鹏', 'www.ezequiel-mills.biz', '8506b114-8117-4fcd-975e-12919cad6155', 'f2b3d1e5-59b6-4a03-a9b6-a0d4bbc41d48', 'yHmEg', 17371576033, '2022-12-27 10:30:46', '2022-10-11 07:43:17', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('金聪健', '潘黎昕', 'www.adalberto-dietrich.co', '9388994a-33a9-4719-bbd1-a9677f4ac391', '9388994a-33a9-4719-bbd1-a9677f4ac391', 'wXB', 17242859178, '2022-03-25 07:20:49', '2022-11-01 04:53:25', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('廖明轩', '史伟祺', 'www.velia-hermiston.com', '212648dd-f050-49bf-a0bb-71688035be7a', 'e655d637-ed11-458c-a4a7-0fe394440138', 'cP', 15138191490, '2022-03-11 14:32:40', '2022-04-24 07:52:20', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('顾弘文', '武子轩', 'www.rosendo-king.com', 'e655d637-ed11-458c-a4a7-0fe394440138', '8506b114-8117-4fcd-975e-12919cad6155', 'zADg', 17814776785, '2022-05-11 21:45:00', '2022-07-16 13:17:27', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('曹潇然', '孟嘉熙', 'www.elva-macgyver.io', '8506b114-8117-4fcd-975e-12919cad6155', 'b2739ce2-bafd-406b-bc1c-16744326a5c5', 'YR', 15061411388, '2022-01-17 05:56:56', '2022-08-11 01:42:50', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('陶靖琪', '武子涵', 'www.jim-watsica.name', '9388994a-33a9-4719-bbd1-a9677f4ac391', '04d90352-4bdc-4ed8-9962-c56a6c9bcc97', 'jZHD', 15846785581, '2022-09-25 04:46:38', '2022-06-09 20:51:30', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('唐耀杰', '曾正豪', 'www.ceola-mitchell.name', '8506b114-8117-4fcd-975e-12919cad6155', '212648dd-f050-49bf-a0bb-71688035be7a', 's3P', 17131321726, '2022-12-21 21:21:27', '2022-01-31 10:22:55', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('孔擎宇', '萧煜祺', 'www.reggie-smith.org', '04d90352-4bdc-4ed8-9962-c56a6c9bcc97', '04d90352-4bdc-4ed8-9962-c56a6c9bcc97', 'Oq', 15086370366, '2022-11-15 05:03:00', '2022-04-14 21:39:42', 0);
+insert into `interface_info` (`name`, `description`, `url`, `requestHeader`, `responseHeader`, `method`, `userId`, `creatTime`, `updateTime`, `isDelete`) values ('郑瑾瑜', '林浩然', 'www.ozzie-stamm.biz', '04d90352-4bdc-4ed8-9962-c56a6c9bcc97', '04d90352-4bdc-4ed8-9962-c56a6c9bcc97', 'uGCg', 14589185453, '2022-11-12 12:05:36', '2022-05-18 23:33:07', 0);
