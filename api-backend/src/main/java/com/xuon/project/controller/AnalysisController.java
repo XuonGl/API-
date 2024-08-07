@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 /**
  * 分析控制器
  *
- * @author <a href="https://github.com/lixuon">程序员鱼皮</a>
+ * @author <a href="https://github.com/lixuon">Xuon</a>
  * @from <a href="https://xuon.icu">编程导航知识星球</a>
  */
 @RestController
